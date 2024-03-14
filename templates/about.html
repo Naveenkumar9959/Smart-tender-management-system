@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  		<title>Smart Tender</title>
+<!-- 
+
+Highway Template
+
+https://templatemo.com/tm-520-highway
+
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.jpg">
+
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="static/css/fontAwesome.css">
+        <link rel="stylesheet" href="static/css/light-box.css">
+        <link rel="stylesheet" href="static/css/templatemo-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="static/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+
+    <!-- <nav>
+        <div class="logo">
+            <a href="index.html">Block<em>chain</em></a>
+        </div>
+      <div class="menu-icon">
+        <span></span>
+      </div>
+    </nav> -->
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid" style="padding: 10px;">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{url_for('index')}}" style="font-size:x-large">Block chain</a>
+          </div>
+      
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="{{url_for('index')}}" style="font-size: larger;">Home</a></li>
+              <li><a href="{{url_for('about')}}" style="font-size: larger;">About Us</a></li>
+              <li >
+                <a href="{{url_for('tender')}}" style="font-size: larger;">Tender Officers</a>
+              </li>
+              <li >
+                <a href="{{url_for('bid')}}" style="font-size: larger;">Bidders</a>
+              </li>
+            </ul>
+           
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    
+
+    <div class="page-heading">
+        <div class="container">
+            <div class="heading-content">
+                <h1>About <em>Us</em></h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="services">
+        <div class="container">
+            <div class="col-md-4 col-sm-6">
+                <div class="service-item">
+                    <div class="icon">
+
+                    <i class="fa fa-child" style="font-size:48px;color:red"></i>
+ </div>
+                    <div class="text">
+                        <h4>Tender Officers</h4>
+                        <p> Here they will come along with an initiation for processing the tender. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-item">
+                    <div class="icon">
+<i class="fa fa-address-book" style="font-size:48px;color:red"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Bidders</h4>
+                        <p>The interested persons for the tender will apply to participate with the tender process.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-item">
+                    <div class="icon">
+<i class="fa fa-cogs" style="font-size:48px;color:red"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Block Chain</h4>
+                        <p>we have used a simple and secure block chain technology and to secure by encryption coupled with indisputable block based architecture for transaction management.  </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-item">
+                    <div class="icon">
+<i class="fa fa-bank" style="font-size:48px;color:red"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Goverment Tenders</h4>
+                        <p>They are officers those who will participating the goverment type tenders.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-item">
+                    <div class="icon">
+<i class="fa fa-bank" style="font-size:48px;color:red"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Private Tenders</h4>
+                        <p>They are officers those who will participating the private type tenders.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-item">
+                    <div class="icon">
+<i class="fa fa-info-circle" style="font-size:48px;color:red"></i>
+                    </div>
+                    <div class="text">
+                        <h4>Info</h4>
+                        <p>They are the group who will advatise recording the tenders and they typee.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="more-about-us">
+        <div class="container">
+            <div class="col-md-5 col-md-offset-7">
+                <div class="content">
+                    <h2>Abjective of the project</h2><br>
+<!--                    <span>Donec et nisi sed</span>-->
+                    <p>The main objective of this project is “To ensure the complete tender management process is secure and efficient we make use of block chain technology to solve tender management issues.”
+<!--                    </p> <div class="simple-btn">-->
+<!--                        <a href="#">Continue Reading</a>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pricing-tables">
+        <div class="container">
+            <div class="col-md-4 col-sm-6">
+
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="table-item premium-item">
+                     <h4>Advantages of</h4>
+                    <span>Online Tenders</span>
+                    <ul>
+                    	<li>Reduced Costs. ...
+
+
+</li>
+                        <li>Increased Productivity E Tendering helps to improve the productivity of your employees. ...</li>
+                        <li>No Paperwork. ...</li>
+                        <li>
+Increased Speed. ...</li>
+                        <li>Live Tender. ...</li>
+                        <li>Standardized Process.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+
+            </div>
+        </div>
+    </div>
+
+<br><br><br>
+
+    <!-- <section class="overlay-menu">
+      <div class="container">
+        <div class="row">
+          <div class="main-menu">
+              <ul>
+                <li>
+                      <a href="{{url_for('index')}}">Home</a>
+                  </li>
+                  <li>
+                      <a href="{{url_for('about')}}">About Us</a>
+                  </li>
+                  <li>
+                      <a href="{{url_for('tender')}}">Tender Officers</a>
+                  </li>
+                  <li>
+                      <a href="single-post.html">Bidders</a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="static/js/vendor/bootstrap.min.js"></script>
+    
+    <script src="static/js/plugins.js"></script>
+    <script src="static/js/main.js"></script>
+
+</body>
+</html>

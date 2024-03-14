@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  		<title>smart tender</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.jpg">
+
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap-theme.min.cs')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/fontAwesome.css')}}"/>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/light-box.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/templatemo-style.css')}}" />
+
+        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    </head>
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+</style>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="#">Block<em>chain</em></a>
+        </div>
+        <div class="menu-icon">
+        <span></span>
+      </div>
+    </nav>
+
+<!-- style="background-color:#3333338c; height:400px;"-->
+    <div id="video-container">
+        <div class="video-overlay"></div>
+        <div class="video-content">
+
+            <div class="inner"><br><br><h2 style="color:white">View Bidder Information</h2>
+                   <center>{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				{% for category, message in messages %}
+					<div class="alert alert-{{ category }}">
+						{{ message }}
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+
+		{% block content %} {% endblock %}
+ </center>
+  <div class="modal-body">
+          <div class="col-md-6 col-md-offset-3">
+            <form id="contact1" action="{{url_for('down')}}" method="post">
+                     <input type="hidden" name="a" value="{{ a }}">
+                    <div class="col-md-12">
+                      <fieldset  style="width:890px;">
+                        <input name="s1" type="text" class="form-control" id="s1" value="{{ s1 }}" style="color:black" readonly>
+                      </fieldset>
+                    </div>
+                <div class="col-md-12">
+                      <fieldset  style="width:890px;">
+                        <input name="s2" type="text" class="form-control" id="s2" value="{{ s2 }}" style="color:black" readonly>
+                      </fieldset>
+                    </div>
+
+                    <div class="col-md-12">
+                      <fieldset  style="width:870px;">
+                        <button type="submit" class="button button1">View Information</button>
+                      </fieldset>
+                </div>
+            </form>
+          </div>
+        </div>
+            </div>
+    </div>
+        <video autoplay loop muted>
+        	<source src="{{url_for('static', filename='highway-loop.mp4')}}" type="video/mp4" />
+        </video>
+    </div>
+
+
+    <section class="overlay-menu">
+      <div class="container">
+        <div class="row">
+          <div class="main-menu">
+                 <ul>
+                <li>
+                      <a href="{{url_for('tenderhome')}}">Home</a>
+                  </li>
+                  <li>
+                      <a href="{{url_for('notification')}}">Notification Center</a>
+                  </li>
+                       <li>
+                      <a href="{{url_for('viewnot')}}">View Notifications Information </a>
+                  </li>
+                  <li>
+                      <a href="{{url_for('viewbid')}}">View Bidders Details</a>
+                  </li>
+                  <li>
+                      <a href="{{url_for('index')}}">Logout</a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="{{url_for('static', filename='js/vendor/bootstrap.min.js')}}"></script>
+
+    <script src="{{url_for('static', filename='js/plugins.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+
+</body>
+</html>
